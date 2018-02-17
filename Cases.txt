@@ -1,0 +1,38 @@
+echo hi
+echo -n hi
+echo -n hi
+echo -e ho
+
+pwd
+cd ..
+pwd
+cd src
+pwd
+cd abc
+pwd
+cd ..
+date 
+date -R
+date -u
+ls
+ls -a abc
+ls -c koko
+ls -a hurray
+pwd
+cat demo.txt
+cat -c demo.txt
+cat -A demo.txt
+mkdir hurray
+ls
+mkdir -v kiki
+mkdir -m ko
+mkdir -m kiki
+ls
+rm rm_test3.txt
+ls
+rm -v rm_test.c
+rm -v rm_test.txt
+ls
+rm -v rm_test2.txt
+history
+exit

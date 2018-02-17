@@ -1,0 +1,87 @@
+Name : Riya Sinha
+Roll No.: 2016079
+
+OS Assignment 1 - Implementing Your Own Shell
+
+Commands Implemented : 
+
+Internal Commands - 
+
+1) pwd 
+	This command will help print the current working directory. This command doesnt have any other options using which one can print.
+
+2) echo [OPTION] [Argument]
+	This command basically prints back what ever is written in the argument place.
+	I have included two options for this command :
+		i) echo -n [Argument]:
+			This will delete the new line after the printing is completed and will directly next to the last argument print the next prompt of the shell.
+		ii) echo -e [Argument]:
+			This command will take only one argument. After pressing enter it will give another prompt where one needs to enter a single argument and the result will be the concatenation of both the arguments. There is no need to provide a "\" like the bash shell after the first argument.
+
+3) cd [Argument]
+	This command is used to shift through directories. This command requires an argument at the end.
+	If the argument is ".." it will go to the previous directory.
+	If the argument is the name of the directory one needs to go to then it will go to that directory if it present in the current working directory.
+
+4) history
+	This command will help print all the commands executed in the current runnimg of the Rudimetary Shell. 
+
+5) exit
+	This command will terminate the process and we will comoe out the shell.
+
+
+External Commands - 
+
+1) date [OPTION]
+	This command is used to print the date and the time at the moment. It is retrieved from the system. 
+	I have included two options for the command :
+		i) date -R : 
+			This command will print the date and time like "Thu, Jan 25 2018 11:01:19 +0530" rather than "Thu Jan 25 11:01:22 IST 2018"
+		ii) date -u : 
+			This command will give the date time in the UTC format that is the Greenwich Mean Time format.
+
+2) ls [option] [Argument]
+	This command is used ot display all the files, folders etc. in a directory.
+	I have put two options for this command :
+		i) ls -a [Argument]
+			This command will show the hidden files in the directory.
+		ii) ls -c[Argument]
+			This command will show all the files in the column format
+
+3) cat [OPTION] [Argument]
+	This command is used to read a file. This command in the Rudimentary Shell reads just one file at a time.
+	I have included two options for the command : 
+		i)cat -c [Argument]
+			This command will show the line numbers
+		ii) cat -A [Argument]
+				This command will show the line numbers again.
+
+4)  mkdir [OPTION] [Argument]
+	This command is used to make new directories. One needs to put an argument at the very least.
+	Options included :
+		i) mkdir -v [Argument]
+			Creates a new directory if not already present and prints the appropriate message.
+		ii) mkdir -m [Argument]
+			This creates a directory that has the permission to read, write and change the directory.
+
+5)  rm [OPTION] [Argument]
+	This command is used to delete a file. One has to put an argument in it.
+	The options included are :
+		i) rm -v [Argument]
+			Deletes the file if it exists and prints the appropriate message.
+		ii) rm -f [Argument]
+			Force deletes a file.
+	
+
+Handling of Corner Cases:
+	i) 	While putting the path in the execl() command I found that if I went to some other 		directory then commands like mkdir(), rm(),ls() etc stopped working. 
+		I handled this error by defining a real path for all the files.
+		Hence one of the corner cases has been handled.
+
+	ii) In this rudimentary shell, many commands like mkdir(), rm() etc require an argument.
+		Hence I have included an error statement for them when they are executed without an argument prompting the user to put an argument.
+
+
+
+
+
